@@ -48,7 +48,7 @@ afterEvaluate {
 
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-commonDatas"
-                version = "v1.0.6"  // 현재 태그 버전으로 업데이트
+                version = "v1.0.7"  // 현재 태그 버전으로 업데이트
             }
         }
     }
