@@ -47,8 +47,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation("com.github.LetsWorkAround:leom-game-commonDatas:v1.0.1")
 }
 
 afterEvaluate {
