@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.library") version "8.3.2"
+    id("org.jetbrains.kotlin.android") version "1.9.22"
     id("maven-publish")
 }
 
@@ -24,11 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17  // Java 버전을 17로 업데이트
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"  // JVM 타겟도 17로 업데이트
     }
     publishing {
         singleVariant("release") {
@@ -38,15 +38,7 @@ android {
     }
 }
 
-dependencies {
-    // libs 참조를 직접 버전으로 변경
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-}
+// 나머지 코드는 동일
 
 afterEvaluate {
     publishing {
@@ -56,12 +48,7 @@ afterEvaluate {
 
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-commonDatas"
-                version = "v1.0.0"
-
-                pom {
-                    name.set("leom-game-commonDatas")
-                    description.set("Game Common Data Library")
-                }
+                version = "v1.0.6"  // 현재 태그 버전으로 업데이트
             }
         }
     }
