@@ -48,5 +48,24 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.github.LetsWorkAround:leom-game-commonDatas:Tag")
+    implementation("com.github.LetsWorkAround:leom-game-commonDatas:v1.0.1")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.github.LetsWorkAround"
+                artifactId = "leom-game-commonDatas"
+                version = "v1.0.2"
+
+                pom {
+                    name.set("leom-game-commonDatas")
+                    description.set("Game Common Data Library")
+                }
+            }
+        }
+    }
 }
