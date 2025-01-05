@@ -14,4 +14,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'commonDatas'
+rootProject.name = "commonDatas"
